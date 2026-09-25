@@ -148,28 +148,36 @@ The following methods are described in supplementary file 'Data Sheet 1.doxc'. F
 | | Step    |   Tool    |   Version?    |   Parameters reported?  |    found where? |
 |-|--------|-----------|---------------|-------------------------|-----------------|
 | 1.| quality trimming | JGI Itag analysis pipeline - includes tools described below | - | none reported | Tremblay et al. (2015)|
-| 2.| paired end read assembly | FLASH software | article | no | Tremblay et al. (2015) |
+| 2.| paired end read assembly | FLASH software | article - versioned, but not specified | no | Tremblay et al. (2015) |
 | 3.| removing common sequence contaminants and PhiX spike-in reads | kmer matching tool DUK | - | no| Tremblay et al. (2015) |
 | 4.| trimming assembled amplicons to remove reverse primer sequences | in-house PERL scripts | - | no | Tremblay et al. (2015) |
 | 5.| filtering amplicon sequences | ? | - | yes, values for lenient and stringent quality control parameters | Tremblay et al. (2015)|
 |--------|-----------|---------------|-------------------------|------------------------|
 | 6.| dereplication & clustering | DNAclust | v3 | dereplicated at 100% identity, clustered at 99% | supplementary file|
-| 7.| chimera scanning | UCHIME | article | de novo mode, reference mode | reference is missing in supplementary file |
+| 7.| chimera scanning | UCHIME | article - missing | de novo mode, reference mode | reference is missing in supplementary file |
 | 8.| clustering | DNAclust | v3 | 97% identity | supplementary file|
-| 9.| taxonomy assignment 16S (bacteria) | RDP classifier | article | modified Greengenes training set built from a concatenation of the Greengenes db v13_5, and Silva eukaryotes 18S r128 | supplementary file, details db in references (DeSantis et al., 2006, Quast et al., 2013) |
-| 10.| taxonomy assignment ITS (fungi) | RDP classifier | article | training set generated from the Unite database | supplementary file, details db in references (Kõljalg et al., 2013) |
+| 9.| taxonomy assignment 16S (bacteria) | RDP classifier | article - versioned, but not specified | modified Greengenes training set built from a concatenation of the Greengenes db v13_5 - data reachable; and Silva eukaryotes 18S r128 - release findable, all that counts| supplementary file, details db in references (DeSantis et al., 2006, Quast et al., 2013) |
+| 10.| taxonomy assignment ITS (fungi) | RDP classifier | article- versioned, but not specified | training set generated from the Unite database - specific db findable| supplementary file, details db in references (Kõljalg et al., 2013) |
 
 Looking at the table, I see some unclear parts:
 
 The most tricky part would most porbably be step 7, as the article referenced to is missing in the references. Moreover, any steps that don't mention parameters could be hard to replicate (steps 2, 3, 4 and therefore step 1; also step 9 and 10 for the parameters of the RDP classifier itself other than the training sets used). Aditionally, the datasets mentioned in steps 9 and 10 have to be further investigated to see if those steps can be fully replicated. 
 
-Depending on how heavily they rely on other paper, it might not be very fair compliant - also depends on how FAIR-compliant other article is. 
-
-If a tool only references an article and no explicit version, is this ok? Have to check whether it is a versioned tool or not -> if it does not say so, it is ok (because if it gets updated without mentioning it, the problem is with the programmers, not the article authors)
-
 The supplementary file refers articles that point to the web pages / web services used. Only in one out of three I could find the dataset referenced. I am unsure whether there are actual issues with the finability of the datasets or if it is just me not undertanding the webpages and terms used in their file/directory system. What I can say is that they are not easily findable, but not that a professional in the field would not be able to find them after investing some time.
 
-They point to webpages, which is good. On SILVA, finding the release is crucial - if you know what you're doing then you can get on from there. GreenGene: old webpage, good that it even exists; data is there, so if you really wanted to find it you could.
+**Nat.** They point to webpages, which is good. On SILVA, finding the release is crucial - if you know what you're doing then you can get on from there. GreenGene: old webpage, good that it even exists; data is there, so if you really wanted to find it you could.
+
+**Answers Nat:**
+
+Depending on how heavily they rely on other paper, it might not be very fair compliant - also depends on how FAIR-compliant other article is. 
+
+If a tool only references an article and no explicit version, is this ok? 
+
+Have to check whether it is a versioned tool or not -> if it does not say so, it is ok (because if it gets updated without mentioning it, the problem is with the programmers, not the article authors)
+
+
+
+
 
 _________________________________________________________________________________________________________________
 ## 4. Makes specific, concrete, evidenced recommendations 
