@@ -146,7 +146,7 @@ No.
 The following methods are described in supplementary file 'Data Sheet 1.doxc'. For the quality trimming (first 5 lines), informations about the pipeline used were fetched from a referenced article in the supplementary file (Tremblay et al., 2015). The remaining steps seem to differ from this referenced article and are described in detail in the supplementary file. Hence, I took the information from the supplementary file.
 
 | Step | Description    |   Tool/script    |   Version    |   Parameters  |    Reference | Availability  |
-|-|--------|-----------|---------------|-------------------------|-----------------|
+|-|--------|-----------|---------------|-------------------------|-----------------|-----------|
 | 1.| quality trimming | JGI Itag analysis pipeline - includes tools described below (1.1 - 1.4) | - | none reported | Tremblay et al. (2015)| - |
 | 1.1| paired end read assembly | FLASH software | tool is versioned, but version not specified | no | Tremblay et al. (2015) | link in reference article does not work. However, there is a git page where the softwaare is openly available | 
 | 1.2| removing common sequence contaminants and PhiX spike-in reads | kmer matching tool DUK | - | no| Tremblay et al. (2015) | DUK package openly available |
@@ -155,7 +155,7 @@ The following methods are described in supplementary file 'Data Sheet 1.doxc'. F
 | 2.| dereplication & clustering | DNAclust | v3 | dereplicated at 100% identity, clustered at 99% | supplementary file| release 3 openly available on source forge |
 | 3.| chimera scanning | UCHIME | - | de novo mode, reference mode | reference is missing in supplementary file | - |
 | 4.| clustering to produce OTUs | DNAclust | v3 | 97% identity | supplementary file| release 3 openly available on source forge |
-| 5.| taxonomy assignment 16S (bacteria) and ITS (fungi)| RDP classifier | tool is versioned, but version not specified | modified Greengenes training set built from a concatenation of the Greengenes db v13_5 and Silva eukaryotes 18S r128 for bacteria; Unite database for fungi| supplementary file, details db in references (DeSantis et al., 2006, Quast et al., 2013, Kõljalg et al., 2013) | link to software in reference does not work. However there is a GitHUb and SOurceForge page where program is openly available |
+| 5.| taxonomy assignment 16S (bacteria) and ITS (fungi)| RDP classifier | tool is versioned, but version not specified | modified Greengenes training set built from a concatenation of the Greengenes db v13_5 and Silva eukaryotes 18S r128 for bacteria; Unite database for fungi| supplementary + db: DeSantis et al., 2006, Quast et al., 2013, Kõljalg et al., 2013 | link to software in reference does not work. However there is a GitHUb and SOurceForge page where program is openly available |
 
 
 
